@@ -8,8 +8,14 @@ jobs:
     name: first-workflow
     runs-on: ubuntu-latest
     steps:
-      - name: command run
-        run: echo "first workflow"
+      - name: before checkout
+        run: ls
+
+      - name: checkout
+        uses: action/checkout@v3
+
+      - name: after checkout
+        run: ls
     
   
   
