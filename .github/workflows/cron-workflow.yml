@@ -2,7 +2,8 @@ name: cron-workflow
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '5 * * * *'
+     
 
 jobs:
   cron-workflow:
