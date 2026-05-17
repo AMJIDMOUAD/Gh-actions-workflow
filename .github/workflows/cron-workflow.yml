@@ -4,9 +4,9 @@ on:
     - cron: "2 * * * *"
   
 jobs:
-  name : cron-workflow
-  runs-on: ubuntu-latest
-  steps:
-    - name: Test cron
-      run : echo " Hello Every 2 min is runing !!"
-      
+  cron-workflow:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Test cron
+       run : echo " Hello Every 2 min is runing !!"
+        
