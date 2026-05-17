@@ -1,13 +1,13 @@
-name : cron-workflow
+name: cron-workflow
 
 on:
   schedule:
-    - cron: "* * * * *"
-  
+    - cron: '* * * * *'
+
 jobs:
   cron-workflow:
     runs-on: ubuntu-latest
+
     steps:
-     - name: Test cron
-       run : echo " Hello Every 1 min is runing "
-        
+      - name: Test cron
+        run: echo "Hello, running every 1 minute"
