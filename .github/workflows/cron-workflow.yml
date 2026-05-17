@@ -1,12 +1,13 @@
 name : cron-workflow
+
 on:
   schedule:
-    - cron: "2 * * * *"
+    - cron: "* * * * *"
   
 jobs:
   cron-workflow:
     runs-on: ubuntu-latest
     steps:
      - name: Test cron
-       run : echo " Hello Every 2 min is runing !!"
+       run : echo " Hello Every 1 min is runing "
         
