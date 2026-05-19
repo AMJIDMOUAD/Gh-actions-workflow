@@ -1,0 +1,24 @@
+name: conditions workflow
+on:
+  workflow-dispatch:
+    inputs:
+      valuetoadd:
+        required: true
+        description: "This is mandatory value"
+    
+jobs: 
+  conditions-workflow:
+    name: conditions-workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: before checkout
+        if: github.ref =='head/ref/master'
+        run: ls
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: after checkout
+        if: github.events.inputs.valuetoadd == 'mouad'
+        run: ls
+    
